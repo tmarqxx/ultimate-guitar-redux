@@ -1,0 +1,47 @@
+.btn {
+  @apply box-content flex cursor-pointer rounded-lg border-transparent py-1 px-4 text-center text-lg font-semibold text-neutral-100 transition duration-300 ease-out;
+}
+
+.btn__outlined {
+  @apply border !bg-transparent;
+}
+
+.btn__loading {
+  @apply cursor-wait;
+}
+
+.btn__disabled {
+  @apply cursor-not-allowed opacity-60;
+}
+
+.btn-primary {
+  @apply bg-orange-500 enabled:hover:bg-orange-400 enabled:active:bg-orange-600;
+}
+
+.btn-primary.btn__outlined {
+  @apply border-orange-500 !text-orange-500 enabled:hover:!bg-orange-500/25 enabled:active:!bg-orange-500/10;
+}
+
+.btn-secondary {
+  @apply bg-teal-600 enabled:hover:bg-teal-500 enabled:active:bg-teal-700;
+}
+
+.btn-secondary.btn__outlined {
+  @apply border-teal-600 !text-teal-600 enabled:hover:!bg-teal-600/25 enabled:active:!bg-teal-600/10;
+}
+
+.btn-pro {
+  @apply bg-orange-800 enabled:hover:bg-orange-700 enabled:active:bg-orange-900;
+}
+
+.btn-pro.btn__outlined {
+  @apply border-orange-800 !text-orange-800 enabled:hover:!bg-orange-800/25 enabled:active:!bg-orange-800/10;
+}
+
+.btn-white {
+  @apply bg-neutral-100 !text-neutral-900 enabled:hover:bg-neutral-50 enabled:active:bg-teal-200;
+}
+
+.btn-white.btn__outlined {
+  @apply border-neutral-100 !text-neutral-100 enabled:hover:!bg-neutral-100/25 enabled:active:!bg-neutral-100/10;
+}

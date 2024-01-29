@@ -31,7 +31,7 @@ const useStyles = cva([], {
 type StylesProps = VariantProps<typeof useStyles>;
 
 export interface Props extends Omit<StylesProps, "size" | "weight"> {
-  variant: `${NonNullable<StylesProps["size"]>}/${NonNullable<
+  variant?: `${NonNullable<StylesProps["size"]>}/${NonNullable<
     StylesProps["weight"]
   >}`;
   header?: boolean;

@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { Button } from "../components/ui/Button";
+import { Tabs } from "../components/ui/Tabs";
 import { Text } from "../components/ui/Text";
 import { Toolbar } from "../components/ui/Toolbar";
 
@@ -20,6 +21,11 @@ const Home: NextPage = () => {
       href: "./shots",
     },
   ];
+
+  const tabs = [
+    "Tab 1",
+    "Tab 2"
+  ]
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-center bg-neutral-900">
@@ -102,6 +108,15 @@ const Home: NextPage = () => {
               {hello.data ? hello.data.greeting : "Loading tRPC query..."}
             </p>
             <div className="flex flex-col items-center gap-4">
+              <Tabs triggers={tabs}>
+                <Tabs.Content value="tab0">
+                  <Text>Hello</Text>
+                </Tabs.Content>
+
+                <Tabs.Content value="tab1">
+                  <Text>Goodbye</Text>
+                </Tabs.Content>
+              </Tabs>
               <div className="flex gap-2">
                 <Button>Primary</Button>
                 <Button outlined>Primary</Button>

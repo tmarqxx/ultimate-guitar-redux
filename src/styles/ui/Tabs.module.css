@@ -1,0 +1,19 @@
+.tabs {
+  @apply flex flex-col;
+}
+
+.tabs_list {
+  @apply flex flex-grow gap-2 p-2;
+}
+
+.tabs_trigger {
+  @apply box-content flex cursor-pointer rounded-lg border bg-transparent border-teal-600 hover:bg-teal-600/25 active:bg-teal-600/10 py-1 px-4 text-center font-semibold text-teal-600 transition duration-300 ease-out;
+}
+
+.tabs_trigger[data-state="active"] {
+  @apply !cursor-default border !bg-teal-600 text-neutral-100;
+}
+
+.tabs_content {
+  @apply flex-grow p-2;
+}
